@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" name="viewport" content="width=device-wodth, initial-scale=1.0">
   <title>AppWidget</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,5 +20,14 @@
 </head>
 <body class="mat-typography">
   <app-root></app-root>
+  <script src="https://code.jquery.com/jquery-2.2.4.js" ></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.js" ></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.menuToggle').click(function() {
+          $('ul').toggleClass('active')
+      })
+    })
+  </script>
 </body>
 </html>

@@ -1,6 +1,68 @@
-<h1 class="tittle">Metro Vibes UI Kit</h1>
-<div class="grid-container">
-  <mat-grid-list cols="1" rowHeight="400px">
+<h1 class="tittle">Metro Vibes UI Kit {{ "HELLO" | translate }}</h1>
+
+<div class="grid-container ">
+  <div style="text-align: center;">
+    <h1>Buttom</h1>
+    <button mat-button [matMenuTriggerFor]="menu" style="background: rgb(115, 115, 115);">Lenguaje</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="translateLenguage(1)"> <img src="../../assets/image/es.png">Es</button>
+      <button mat-menu-item (click)="translateLenguage(2)"><img src="../../assets/image/en.jpeg">En</button>
+    </mat-menu>
+  </div>
+
+  <div>
+    <h1>UserInfo</h1>
+    <div class="containerUser">
+      <div class="container__info">
+        <span><i class="fas fa-eye"></i>2350</span>
+        <span><i class="fas fa-comment-alt"></i>624</span>
+        <span><i class="fas fa-heart"></i>1470</span>
+      </div>
+      <div class="container__profile">
+        <img
+          src="https://img2.freepng.es/20180623/iqh/kisspng-computer-icons-avatar-social-media-blog-font-aweso-avatar-icon-5b2e99c40ce333.6524068515297806760528.jpg"
+          alt="people" />
+        <div class="container__profile__text">
+          <h2>Juan Andres</h2>
+          <p>by <b>Engineer</b></p>
+          <div class="space"></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="containerUserProfile">
+    <div class="card">
+      <img src="../../assets/image/avatar1.jpeg" alt="Person" class="card__image">
+      <p class="card__name">Lily-Grace Colley</p>
+      <div class="grid-containerInfo">
+        <div class="grid-child-posts">
+          156 Post
+        </div>
+        <div class="grid-child-followers">
+          1012 Likes
+        </div>
+      </div>
+      <ul class="social-icons">
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fab fa-codepen"></i></a></li>
+      </ul>
+      <button class="btn draw-border">Follow</button>
+      <button class="btn draw-border">Message</button>
+    </div>
+  </div>
+
+  <div class="gridMenu">
+    <h1>Menu</h1>
+    <app-menu></app-menu>
+  </div>
+
+  
+  <div>
+    <h1>Contacts</h1>
     <div class="contact">
       <section id="contact">
         <div class="sectionheader">
@@ -10,40 +72,19 @@
           <label for="checkcontact" class="contactbutton">
             <div class="mail"></div>
           </label><input id="checkcontact" type="checkbox">
-
           <form action="" method="post" class="contactform">
+            <br>
+            <p-multiSelect [options]="email" [(ngModel)]="selectedEmail" defaultLabel="Select Destination"
+              optionLabel="name" display="chip"></p-multiSelect>
             <p class="input_wrapper"><input type="text" name="contact_nom" value="" id="contact_nom"><label
-                for="contact_nom">Nombre</label></p>
-            <p class="input_wrapper"><input type="text" name="contact_email" value="" id="contact_email"><label
-                for="contact_email">EMAIL</label></p>
-            <p class="textarea_wrapper"><textarea name="contact_message" id="contact_message"></textarea></p>
+                for="contact_nom">Subject</label></p>
+            <p>Message</p>
+            <p class="textarea_wrapper"><textarea name="contact_message" id="contact_message"></textarea>
+            </p>
             <p class="submit_wrapper"><input type="submit" value="Enviar"></p>
           </form>
         </article>
       </section>
     </div>
-  </mat-grid-list>
-
-  <mat-grid-list cols="1" rowHeight="400px">
-      <div class="containerUser">
-        <div class="container__info">
-          <span><i class="fas fa-eye"></i>2350</span>
-          <span><i class="fas fa-comment-alt"></i>624</span>
-          <span><i class="fas fa-heart"></i>1470</span>
-        </div>
-        <div class="container__profile">
-          <img
-            src="https://img2.freepng.es/20180623/iqh/kisspng-computer-icons-avatar-social-media-blog-font-aweso-avatar-icon-5b2e99c40ce333.6524068515297806760528.jpg"
-            alt="people" />
-          <div class="container__profile__text">
-            <h2>Juan Andres</h2>
-            <p>by <b>Engineer</b></p>
-          </div>
-        </div>
-      </div>
-  </mat-grid-list>
-
-  <mat-grid-list cols="1" rowHeight="400px">
-    <app-menu></app-menu>
-  </mat-grid-list>
+  </div>
 </div>

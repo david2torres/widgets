@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Explicación
 
-Decidi usar estos widgets dado que considero son de los mas usados y necesarios, por cuestion de tiempo personal no pude enviar la prueba completa con la internacionalización del archivo i18
+Decidi usar estos widgets dado que considero son de los mas usados y necesarios, y adicional a ello la implementación de las animaciones se podria apreciar mejor

@@ -1,4 +1,21 @@
 {
-    "HELLO": "Hola"
+    "HELLO": "Hola",
+    "TITULO": "Metro Vibes UI Kit Español",
+    "Idioma": "Seleccione Idioma",
+    "UserInfo": "Información de Usuario",
+    "EditUser": "Editar Usuario",
+    "Stadistics": "Estadisticas",
+    "Settings": "Ajustes",
+    "Events": "Eventos",
+    "Contacts": "Contactos",
+    "GRAFICA": "Grafica",
+    "FORM": "Formulario",
+    "selectContact": "Seleccione Contactos",
+    "subject": "Asunto",
+    "Message": "Mensaje",
+    "Send": "Enviar"
+
+
+
     
 }

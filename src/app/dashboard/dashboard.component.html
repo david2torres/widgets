@@ -1,17 +1,21 @@
-<h1 class="tittle">Metro Vibes UI Kit {{ "HELLO" | translate }}</h1>
+<h1 class="tittle">{{ "TITULO" | translate }}</h1>
 
 <div class="grid-container ">
+
+  <!-- Idioma Bottom -->
   <div style="text-align: center;">
-    <h1>Buttom</h1>
-    <button mat-button [matMenuTriggerFor]="menu" style="background: rgb(115, 115, 115);">Lenguaje</button>
+    <h1>{{ "Idioma" | translate }}</h1>
+    <button mat-button [matMenuTriggerFor]="menu" style="background: rgb(115, 115, 115);">{{ "Idioma" | translate
+      }}</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="translateLenguage(1)"> <img src="../../assets/image/es.png">Es</button>
       <button mat-menu-item (click)="translateLenguage(2)"><img src="../../assets/image/en.jpeg">En</button>
     </mat-menu>
   </div>
 
+  <!-- User Info Card -->
   <div>
-    <h1>UserInfo</h1>
+    <h1>{{ "UserInfo" | translate }}</h1>
     <div class="containerUser">
       <div class="container__info">
         <span><i class="fas fa-eye"></i>2350</span>
@@ -32,6 +36,7 @@
     </div>
   </div>
 
+  <!-- User Profile -->
   <div class="containerUserProfile">
     <div class="card">
       <img src="../../assets/image/avatar1.png" alt="Person" class="card__image">
@@ -50,20 +55,22 @@
         <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
         <li><a href="#"><i class="fab fa-codepen"></i></a></li>
       </ul>
-      <button class="btn draw-border"> EditUser <i class="fas fa-user"></i></button>
-      <button class="btn draw-border">Stadistics <i class="fas fa-analytics"></i></button>
-      <button class="btn draw-border">Settings <i class="fas fa-cogs"></i></button>
-      <button class="btn draw-border">Events <i class="fas fa-map-marker-alt"></i></button>
+      <button class="btn draw-border">{{ "EditUser" | translate }} <i class="fas fa-user"></i></button>
+      <button class="btn draw-border">{{ "Stadistics" | translate }} <i class="fas fa-analytics"></i></button>
+      <button class="btn draw-border">{{ "Settings" | translate }} <i class="fas fa-cogs"></i></button>
+      <button class="btn draw-border">{{ "Events" | translate }} <i class="fas fa-map-marker-alt"></i></button>
     </div>
   </div>
 
+  <!-- Menu -->
   <div class="gridMenu">
     <h1>Menu</h1>
     <app-menu></app-menu>
   </div>
 
+  <!-- Tarjetas Interactivas -->
   <div>
-    <h1>Contacts</h1>
+    <h1>{{ "Contacts" | translate }}</h1>
     <div class="containerGraficas">
       <div class="section over-hide">
         <div class="container">
@@ -71,13 +78,13 @@
             <div class="col-12 text-center align-self-center py-5">
               <div class="section text-center py-5 py-md-0">
                 <input class="pricing" type="checkbox" id="pricing" name="pricing" />
-                <label for="pricing"><span class="block-diff">Grafica<span class="float-right"
-                      style="margin-left: 47px;">Formulario</span></span></label>
+                <label for="pricing"><span class="block-diff">{{ "GRAFICA" | translate }}<span class="float-right"
+                      style="margin-left: 47px;">{{ "FORM" | translate }}</span></span></label>
                 <div class="card-3d-wrap mx-auto">
                   <div class="card-3d-wrapper">
                     <div class="card-front">
                       <div class="pricing-wrap">
-                        <h4 class="mb-5"> Grafica
+                        <h4 class="mb-5"> {{ "GRAFICA" | translate }}
                           <p-chart type="doughnut" [data]="data" [options]="chartOptions" [style]="{'width': '40%'}">
                           </p-chart>
                         </h4>
@@ -86,19 +93,19 @@
                     </div>
                     <div class="card-back">
                       <div class="pricing-wrap">
-                        <h4 class="mb-5">Formulario</h4>
+                        <h4 class="mb-5">{{ "FORM" | translate }}</h4>
                         <br><br>
-                        <p-multiSelect [options]="email" [(ngModel)]="selectedEmail" defaultLabel="Select Contact"
+                        <p-multiSelect [options]="email" [(ngModel)]="selectedEmail" defaultLabel='{{ "FORM" | translate }}'
                           optionLabel="name" display="chip"></p-multiSelect>
                         <br>
                         <br>
-                        <input type="text" placeholder="Subject" pInputText style="width: 17rem;" />
+                        <input type="text" placeholder='{{ "subject" | translate }}' pInputText style="width: 17rem;" />
                         <br><br>
                         <span class="p-float-label">
-                          <textarea placeholder="Message" id="float-input" rows="5" cols="30" pInputTextarea></textarea>
+                          <textarea placeholder='{{ "Message" | translate }}'  id="float-input" rows="5" cols="30" pInputTextarea></textarea>
                         </span>
                         <p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
-                        <a href="#0" class="link">Send</a>
+                        <a href="#0" class="link">{{ "Send" | translate }}</a>
                       </div>
                     </div>
                   </div>

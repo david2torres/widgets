@@ -20,6 +20,10 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { MultiSelectModule } from 'primeng/multiselect';
+import { ChartModule } from 'primeng/chart';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputTextModule } from 'primeng/inputtext';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -46,7 +50,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatCardModule,
     HttpClientModule,
     MatMenuModule,
+    ChartModule,
+    InputTextareaModule,
     MultiSelectModule,
+    InputTextModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

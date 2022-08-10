@@ -63,28 +63,50 @@
   
   <div>
     <h1>Contacts</h1>
-    <div class="contact">
-      <section id="contact">
-        <div class="sectionheader">
-          <h1>CONTACTS</h1>
+    <div class="containerGraficas">
+      <div class="section over-hide">
+        <div class="container">
+          <div class="row full-height justify-content-center">
+            <div class="col-12 text-center align-self-center py-5">
+              <div class="section text-center py-5 py-md-0">
+                <input class="pricing" type="checkbox" id="pricing" name="pricing" />
+                <label for="pricing"><span class="block-diff">Grafica<span class="float-right"
+                      style="margin-left: 47px;">Formulario</span></span></label>
+                <div class="card-3d-wrap mx-auto">
+                  <div class="card-3d-wrapper">
+                    <div class="card-front">
+                      <div class="pricing-wrap">
+                        <h4 class="mb-5"> Grafica
+                          <p-chart type="doughnut" [data]="data" [options]="chartOptions" [style]="{'width': '40%'}">
+                          </p-chart>
+                        </h4>
+                        <p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
+                      </div>
+                    </div>
+                    <div class="card-back">
+                      <div class="pricing-wrap">
+                        <h4 class="mb-5">Formulario</h4>
+                        <br><br>
+                        <p-multiSelect [options]="email" [(ngModel)]="selectedEmail" defaultLabel="Select Contact"
+                          optionLabel="name" display="chip"></p-multiSelect>
+                        <br>
+                        <br>
+                        <input type="text" placeholder="Subject" pInputText style="width: 17rem;" />
+                        <br><br>
+                        <span class="p-float-label">
+                          <textarea placeholder="Message" id="float-input" rows="5" cols="30" pInputTextarea></textarea>
+                        </span>
+                        <p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
+                        <a href="#0" class="link">Send</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <article>
-          <label for="checkcontact" class="contactbutton">
-            <div class="mail"></div>
-          </label><input id="checkcontact" type="checkbox">
-          <form action="" method="post" class="contactform">
-            <br>
-            <p-multiSelect [options]="email" [(ngModel)]="selectedEmail" defaultLabel="Select Destination"
-              optionLabel="name" display="chip"></p-multiSelect>
-            <p class="input_wrapper"><input type="text" name="contact_nom" value="" id="contact_nom"><label
-                for="contact_nom">Subject</label></p>
-            <p>Message</p>
-            <p class="textarea_wrapper"><textarea name="contact_message" id="contact_message"></textarea>
-            </p>
-            <p class="submit_wrapper"><input type="submit" value="Enviar"></p>
-          </form>
-        </article>
-      </section>
+      </div>
     </div>
   </div>
 </div>

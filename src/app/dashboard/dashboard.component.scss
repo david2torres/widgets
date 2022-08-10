@@ -20,6 +20,7 @@ img {
   width: 20px;
   margin-right: 10px;
 }
+
 //Styles User Profile
 .containerUserProfile {
   display: grid;
@@ -43,7 +44,7 @@ img {
     border-radius: 50%;
     border: 5px solid #272133;
     margin-top: 20px;
-    box-shadow: 0 10px 50px rgba(235, 25, 110, 1);
+    box-shadow: 0 10px 50px rgb(1, 6, 93);
   }
 
   .card__name {
@@ -93,7 +94,7 @@ img {
     height: 45px;
     border-radius: 100%;
     display: block;
-    background: linear-gradient(45deg, #ff003c, #c648c8);
+    background: linear-gradient(45deg, #31020d, #0b0dae);
     transition: all 265ms ease-out;
   }
 
@@ -128,7 +129,7 @@ img {
   }
 
   .btn:focus {
-    outline: 2px dotted #55d7dc;
+    outline: 2px dotted #0115a5;
   }
 
   .draw-border {
@@ -163,12 +164,12 @@ img {
   }
 
   .draw-border:hover {
-    color: #ffe593;
+    color: #ffffff;
   }
 
   .draw-border:hover::before,
   .draw-border:hover::after {
-    border-color: #eb196e;
+    border-color: #01019f;
     -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
     transition: border-color 0s, width 0.25s, height 0.25s;
     width: 100%;
@@ -185,7 +186,6 @@ img {
     transition-delay: 0s, 0.25s, 0s;
   }
 }
-
 
 //UserInfo
 .containerUser {

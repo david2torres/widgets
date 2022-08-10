@@ -1,5 +1,5 @@
 .grid-container {
-  // text-align: center;
+  text-align: center;
   margin: 33px;
   display: grid;
   grid-gap: 0rem;
@@ -9,7 +9,7 @@
 }
 
 .tittle {
-  font: 400 24px/32px Roboto, "Helvetica Neue", sans-serif;
+  font: 410 35px/49px Roboto, "Helvetica Neue", sans-serif;
   letter-spacing: normal;
   margin: 21px 32px 16px;
   text-align: center;
@@ -19,6 +19,75 @@ img {
   height: 20px;
   width: 20px;
   margin-right: 10px;
+}
+
+//UserInfo
+.containerUser {
+  $bright-color: #fff;
+  @mixin bottom {
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  background: url("https://images.unsplash.com/photo-1574007557239-acf6863bc375?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 450px;
+  height: 370px;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);
+  margin-left: 3rem;
+
+  .container__info {
+    @include bottom;
+    bottom: 27%;
+    background: #424242;
+    opacity: 0.9;
+    display: flex;
+    align-items: flex-end;
+    padding: 6px 7rem;
+    color: $bright-color;
+    span {
+      margin-right: 20px;
+    }
+    i {
+      margin-right: 10px;
+    }
+  }
+  .container__profile {
+    background-color: #e4f2fd;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    @include bottom();
+    bottom: 0;
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-position: center;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+    h2 {
+      color: #334454;
+      font-size: 1.2rem;
+    }
+    p {
+      color: #a1b2bc;
+      font-size: 0.8rem;
+    }
+    p b {
+      font-style: italic;
+    }
+  }
 }
 
 //Styles User Profile
@@ -118,14 +187,16 @@ img {
   //Animation and Styles Buttoms
 
   .btn {
+    text-align: left;
+    padding-left: 15px;
     background: none;
     border: none;
     cursor: pointer;
     line-height: 1.5;
     font: 700 1.2rem "Roboto Slab", sans-serif;
-    padding: 0.75em 2em;
+    padding: 0.45em 2em;
     letter-spacing: 0.05rem;
-    margin: 1em;
+    margin: 0.2em;
     width: 13rem;
   }
 
@@ -186,74 +257,6 @@ img {
   .draw-border:hover::after {
     -webkit-transition-delay: 0s, 0.25s, 0s;
     transition-delay: 0s, 0.25s, 0s;
-  }
-}
-
-//UserInfo
-.containerUser {
-  $bright-color: #fff;
-  @mixin bottom {
-    position: absolute;
-    right: 0;
-    left: 0;
-  }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  background: url("https://images.unsplash.com/photo-1574007557239-acf6863bc375?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 450px;
-  height: 370px;
-  position: relative;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);
-
-  .container__info {
-    @include bottom;
-    bottom: 27%;
-    background: #424242;
-    opacity: 0.9;
-    display: flex;
-    align-items: flex-end;
-    padding: 6px 7rem;
-    color: $bright-color;
-    span {
-      margin-right: 20px;
-    }
-    i {
-      margin-right: 10px;
-    }
-  }
-  .container__profile {
-    background-color: #e4f2fd;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    @include bottom();
-    bottom: 0;
-    img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-position: center;
-      object-fit: cover;
-      margin-right: 10px;
-    }
-    h2 {
-      color: #334454;
-      font-size: 1.2rem;
-    }
-    p {
-      color: #a1b2bc;
-      font-size: 0.8rem;
-    }
-    p b {
-      font-style: italic;
-    }
   }
 }
 

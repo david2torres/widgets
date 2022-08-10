@@ -1,12 +1,11 @@
 <h1 class="tittle">{{ "TITULO" | translate }}</h1>
-
+<hr>
 <div class="grid-container ">
 
   <!-- Idioma Bottom -->
   <div style="text-align: center;">
     <h1>{{ "Idioma" | translate }}</h1>
-    <button mat-button [matMenuTriggerFor]="menu" style="background: rgb(115, 115, 115);">{{ "Idioma" | translate
-      }}</button>
+    <button [matMenuTriggerFor]="menu" pButton pRipple type="button" label='{{ "Idioma" | translate }}'  class="p-button-outlined p-button-rounded p-button-success"></button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="translateLenguage(1)"> <img src="../../assets/image/es.png">Es</button>
       <button mat-menu-item (click)="translateLenguage(2)"><img src="../../assets/image/en.jpeg">En</button>
@@ -14,7 +13,7 @@
   </div>
 
   <!-- User Info Card -->
-  <div>
+  <div style="text-align: center;">
     <h1>{{ "UserInfo" | translate }}</h1>
     <div class="containerUser">
       <div class="container__info">
@@ -38,6 +37,7 @@
 
   <!-- User Profile -->
   <div class="containerUserProfile">
+    <h1>{{ "UserInfo" | translate }}</h1>
     <div class="card">
       <img src="../../assets/image/avatar1.png" alt="Person" class="card__image">
       <p class="card__name">Tom Cepeda Guzman</p>
@@ -95,14 +95,15 @@
                       <div class="pricing-wrap">
                         <h4 class="mb-5">{{ "FORM" | translate }}</h4>
                         <br><br>
-                        <p-multiSelect [options]="email" [(ngModel)]="selectedEmail" defaultLabel='{{ "FORM" | translate }}'
-                          optionLabel="name" display="chip"></p-multiSelect>
+                        <p-multiSelect [options]="email" [(ngModel)]="selectedEmail"
+                          defaultLabel='{{ "FORM" | translate }}' optionLabel="name" display="chip"></p-multiSelect>
                         <br>
                         <br>
                         <input type="text" placeholder='{{ "subject" | translate }}' pInputText style="width: 17rem;" />
                         <br><br>
                         <span class="p-float-label">
-                          <textarea placeholder='{{ "Message" | translate }}'  id="float-input" rows="5" cols="30" pInputTextarea></textarea>
+                          <textarea placeholder='{{ "Message" | translate }}' id="float-input" rows="5" cols="30"
+                            pInputTextarea></textarea>
                         </span>
                         <p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
                         <a href="#0" class="link">{{ "Send" | translate }}</a>

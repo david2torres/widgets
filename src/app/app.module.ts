@@ -23,6 +23,7 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { ChartModule } from 'primeng/chart';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -51,6 +52,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     MatMenuModule,
     ChartModule,
+    ButtonModule,
     InputTextareaModule,
     MultiSelectModule,
     InputTextModule,
